@@ -1,0 +1,114 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="bmob.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="table/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="table/css/main.css">
+
+
+    
+<title></title>
+</head>
+
+<body>
+    
+
+
+<!--导航栏 begin-->
+     <div>
+            <!--sibar end-->
+            <!--软件下载 begin-->
+            <div class="sec_pro_con">
+                <div class="clearfix pb10 pt10 dl_tt">
+                       <i class="fl circle_mark" style="margin-top:10px"></i>
+                       <i class="fl yahei f16 title_st2" style="margin-top:10px">产品列表中心</i>
+                    </div>
+                  
+                    
+                    <!-- /wizar_step -->
+                
+                
+            </div>
+            <!--软件下载 end-->
+        </div>
+
+    <!--主要内容 end-->
+
+
+
+
+
+
+
+
+    
+
+
+<script type="text/javascript" src="table/js/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="table/js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript" src="table/js/bootstrap-paginator.js"></script>
+    
+    <script type="text/javascript">
+
+		Bmob.initialize("993a2f6da38605a6a09e6952a293c980", "6841edf8b325739498869e6d14e1e594");
+        Bmob.debug(true);
+    
+    
+    
+    
+    function pageProduct(total,page)
+    {
+        var options = {
+                bootstrapMajorVersion: 3,
+                currentPage: page,  
+                totalPages: total/10 + 1,  
+                size:"normal",  
+                alignment:"center",  
+                itemTexts: function (type, page, current) {  
+                    switch (type) {  
+                        case "first":  
+                            return "第一页";  
+                        case "prev":  
+                            return "<";  
+                        case "next":  
+                            return ">";  
+                        case "last":  
+                            return "最后页";  
+                        case "page":  
+                            return  page;  
+                    }                 
+                },  
+                  onPageClicked: function (e, originalEvent, type, page) {
+                         //加载pageclickednumber页的数据
+                           
+                        }   
+            };
+        $('.pagination').bootstrapPaginator(options);  
+    }
+    
+    function initdata()
+    {
+       
+    }
+    
+    
+    
+    
+  
+
+$(function()
+    {
+       ajaxSoftList(1);
+    
+    }
+ 
+</script>
+
+</body>
+</html>
